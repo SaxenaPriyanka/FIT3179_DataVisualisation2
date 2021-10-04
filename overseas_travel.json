@@ -17,8 +17,7 @@
           "key": "State",
           "fields": ["June_2019", "June_2020","June_2021" ]
         }
-      },
-      {"calculate": "datum.June_2019", "as": "June of 2019"}
+      }
     ],
     "projection": {"type": "equirectangular"},
     "mark": {"type": "geoshape"},
