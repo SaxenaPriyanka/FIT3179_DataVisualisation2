@@ -1,15 +1,36 @@
-{ 
+{
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Overseas Travel - Australia (2019)",
     "width": 800,
-    "height": 500,
-    "title":  "OVERSEAS TRAVEL - AUSTRALIA",
+    "height": 600,
+    "data": {
+      "url": "australia.topojson",
+      "format": {"type": "topojson", "feature": "STE_2016_AUST"}
+    },
+    "transform": [
+      {
+        "lookup": "properties.STE_NAME16",
+        "from": {
+          "data": {
+            "url": "Arrivals_statewise.csv"
+          },
+          "key": "State",
+          "fields": ["June_2019", "June_2020","June_2021" ]
+        }
+      },
+      {"calculate": "datum.June_2019", "as": "June of 2019"}
+    ],
     "projection": {"type": "equirectangular"},
-    "layer": [
-        {
-        "data": {
-            "url": "australia_map.topojson",
-            "format": {"type": "topojson", "feature": "aust_cd66states"}
-        },
-        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
-        }]
-}
+    "mark": {"type": "geoshape"},
+    "encoding": {
+      "color": {
+        "field": "June_2021",
+        "type": "quantitative",
+        "scale": {"type": "log"}
+      },
+      "tooltip": [
+        {"field": "properties.STE_NAME16", "type": "nominal", "title": "State"},
+        {"field": "June_2019", "type": "quantitative", "title": "Population in June 2019"}
+      ]
+    }
+  }
