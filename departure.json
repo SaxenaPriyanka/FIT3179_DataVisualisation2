@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Overseas Travel - Australia (2019 - 2021)",
+    "title": "Departures from Australia (2019 - 2021)",
     "width": 800,
     "height": 600,
     "data": {
