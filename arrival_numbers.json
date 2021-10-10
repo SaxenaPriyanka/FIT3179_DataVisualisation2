@@ -8,13 +8,17 @@
     },
     "transform": [
         {
-            "calculate": "timeParse(datum['Month_Year'], '%b-%Y')",
+            "calculate": "timeParse(datum['Month_Year'], '%d-%m-%y')",
             "as": "dates"
         }
       ],
     "mark": "line",
     "encoding": {
     "x": { "field": "dates", "timeUnit":"yearmonth", "type": "ordinal", "title":"Dates"},
-    "y": { "field": "Australian Citizen Arrivals", "type": "quantitative"}
+    "y": { "field": "Australian Citizen Arrivals", "type": "quantitative"},
+    "tooltip": [
+        {"field": "dates", "type": "ordinal", "title": "Arrival dates"},
+        {"field": "Australian Citizen Arrivals", "type": "quantitative", "title": "Arrivals in Australia", "format":","}
+    ]
     }
 }

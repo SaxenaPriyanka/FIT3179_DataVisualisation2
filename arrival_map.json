@@ -29,9 +29,9 @@
       },
       "tooltip": [
         {"field": "properties.STE_NAME16", "type": "nominal", "title": "State"},
-        {"field": "June_2019", "type": "quantitative", "title": "Arrivals in June 2019"},
-        {"field": "June_2020", "type": "quantitative", "title": "Arrivals in June 2020"},
-        {"field": "June_2021", "type": "quantitative", "title": "Arrivals in June 2021"}    
+        {"field": "June_2019", "type": "quantitative", "title": "Arrivals in June 2019", "format": ","},
+        {"field": "June_2020", "type": "quantitative", "title": "Arrivals in June 2020", "format": ","},
+        {"field": "June_2021", "type": "quantitative", "title": "Arrivals in June 2021", "format": ","}    
       ]
     }
   }
