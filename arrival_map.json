@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Departures from Australia (2019 - 2021)",
+    "title": "Statewise arrivals to Australia (2019 - 2021)",
     "width": 800,
     "height": 600,
     "data": {
@@ -29,9 +29,9 @@
       },
       "tooltip": [
         {"field": "properties.STE_NAME16", "type": "nominal", "title": "State"},
-        {"field": "June_2019", "type": "quantitative", "title": "Population in June 2019"},
-        {"field": "June_2020", "type": "quantitative", "title": "Population in June 2020"},
-        {"field": "June_2021", "type": "quantitative", "title": "Population in June 2021"}    
+        {"field": "June_2019", "type": "quantitative", "title": "Arrivals in June 2019"},
+        {"field": "June_2020", "type": "quantitative", "title": "Arrivals in June 2020"},
+        {"field": "June_2021", "type": "quantitative", "title": "Arrivals in June 2021"}    
       ]
     }
   }
