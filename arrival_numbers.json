@@ -12,13 +12,30 @@
             "as": "dates"
         }
       ],
-    "mark": "line",
-    "encoding": {
-    "x": { "field": "dates", "timeUnit":"yearmonth", "type": "ordinal", "title":"Dates"},
-    "y": { "field": "Australian Citizen Arrivals", "type": "quantitative"},
-    "tooltip": [
-        {"field": "dates", "type": "ordinal", "title": "Arrival dates"},
-        {"field": "Australian Citizen Arrivals", "type": "quantitative", "title": "Arrivals in Australia", "format":","}
+    "layer":[ {
+      "mark": { 
+        "type": "line",
+        "point":true
+        },
+        "encoding": {
+        "x": { "field": "dates", "timeUnit":"yearmonth", "type": "ordinal", "title":"Dates"},
+        "y": { "field": "Australian Citizen Arrivals", "type": "quantitative", "title": "Arrivals in Australia"},
+        "tooltip": [
+            {"field": "dates", "type": "temporal", "title": "Arrivals in the month"},
+            {"field": "Australian Citizen Arrivals", "type": "quantitative", "title": "Number of Australian Arrivals", "format":","}
+        ]
+        }},
+        {"mark": { 
+            "type": "line",
+            "point":true
+            },
+            "encoding": {
+            "x": { "field": "dates", "timeUnit":"yearmonth", "type": "ordinal", "title":"Dates"},
+            "y": { "field": "Non-Australian Citizen Arrivals", "type": "quantitative", "title": "Arrivals in Australia"},
+            "tooltip": [
+                {"field": "dates", "type": "temporal", "title": "Arrivals in the month"},
+                {"field": "Non-Australian Citizen Arrivals", "type": "quantitative", "title": "Number of Non-Australian Arrivals", "format":","}
+            ]
+        }}
     ]
-    }
 }
