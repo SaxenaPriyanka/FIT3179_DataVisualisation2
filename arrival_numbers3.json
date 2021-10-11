@@ -3,10 +3,10 @@
     "data": {
       "url": "Arrival_numbers_all.csv"
     },
-    "width": 500,
+    "width": 650,
     "height": 400,
     "title": "Arrivals to Australia (2018 - 2021)",
-    "background": "#D6EAF8",
+    "background": "#FBEEE6  ",
     "params": [
       {
         "name": "Citizenship_Selection",
@@ -29,6 +29,8 @@
       }
     ],
     "transform": [  
+        {"filter": "datum.arrival_numbers > 0"}, 
+        {"filter": "datum.arrival_numbers <= 1183090"},
       {"filter": "Citizenship_Selection == null || datum.symbol == Citizenship_Selection"},
       {
         "calculate": "timeParse(datum['date'], '%d-%m-%y')",
@@ -84,8 +86,6 @@
               {
                 "mark": {
                   "type": "text",
-                  "stroke": "black",
-                  "strokeWidth": 2,
                   "align": "left",
                   "dx": 5,
                   "dy": -5
@@ -113,3 +113,5 @@
       "legend": {"labelColor": "black", "titleColor": "black"}
     }
   }
+
+
