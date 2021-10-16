@@ -1,7 +1,7 @@
 {
   "title": "Top 10 Countries of citizenship arriving in Australia",
   "data": {
-    "url": "top_countries_citizenship.csv"
+    "url": "arrival_top_countries_citizenship.csv"
   },
   "width": "600",
   "height": "400",

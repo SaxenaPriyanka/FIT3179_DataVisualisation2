@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Statewise arrivals to Australia (2019 - 2021)",
+    "title": "Statewise arrivals to Australia (2019 to 2021)",
     "width": 800,
     "height": 600,
     "background": "#FBEEE6  ",
@@ -21,10 +21,11 @@
       }
     ],
     "projection": {"type": "equirectangular"},
-    "mark": {"type": "geoshape"},
+    "mark": {"type": "geoshape", "stroke": "black", "strokeWidth": 0.8},
     "encoding": {
       "color": {
         "field": "June_2021",
+        "title": "Number of arrivals",
         "type": "quantitative",
         "scale": {"type": "log"}
       },
