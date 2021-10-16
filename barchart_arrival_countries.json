@@ -4,6 +4,9 @@
   "height": 400,
   "data": {"url": "top_countries_citizenship.csv"},
   "mark": "bar",   
+  "transform": [
+    {"filter": {"param": "Year"}}
+  ],
   "encoding": {
     "x": {"aggregate": "sum", "field": "Number of arrivals"},
     "y": {"field": "Country of citizenship"},

@@ -70,6 +70,15 @@ body {background-color:#a4e3f3;}
   justify-content: center;
 }
 
+#barchart_done{
+  position: relative;
+  top: 170px;
+  left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .vega-bind{
     position: relative;
     top: 280px;
