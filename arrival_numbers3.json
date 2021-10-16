@@ -1,12 +1,11 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "data": {
-      "url": "Arrival_numbers_all.csv"
+      "url": "Arrival_citizenships.csv"
     },
     "width": 650,
     "height": 400,
-    "title": "Arrivals to Australia (2018 - 2021)",
-    "background": "#FBEEE6  ",
+    "title": "Arrivals to Australia (2018 to 2021)",
     "params": [
       {
         "name": "Citizenship_Selection",
@@ -106,7 +105,7 @@
         "domainColor": "black",
         "tickColor": "black",
         "labelColor": "black",
-        "grid": false,
+        "grid": true,
         "titleColor": "black"
       },
       "view": {"stroke": "transparent"},
