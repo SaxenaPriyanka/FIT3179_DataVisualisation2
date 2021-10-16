@@ -52,7 +52,7 @@ body {background-color:#a4e3f3;}
     font-size: 15px;
   }
 
-#australia_arrival_line3{
+#australia_arrival_line{
     position: relative;
     top: 70px;
     left: 75px;
@@ -63,7 +63,7 @@ body {background-color:#a4e3f3;}
 
 #barchart_arrivals_countries{
   position: relative;
-  top: 170px;
+  top: 200px;
   left: 15px;
   display: flex;
   align-items: center;
