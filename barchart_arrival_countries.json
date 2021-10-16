@@ -1,0 +1,15 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 650,
+  "height": 400,
+  "data": {"url": "top_countries_citizenship.csv"},
+  "mark": "bar",   
+  "encoding": {
+    "x": {"aggregate": "sum", "field": "Number of arrivals"},
+    "y": {"field": "Country of citizenship"},
+    "color": {"field": "Year"},
+    "tooltip": [
+      {"field": "Number of arrivals", "type": "quantitative", "format": ","}
+    ]
+  }
+}
