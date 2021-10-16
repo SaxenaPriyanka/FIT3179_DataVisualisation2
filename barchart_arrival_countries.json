@@ -1,18 +1,35 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 650,
-  "height": 400,
-  "data": {"url": "top_countries_citizenship.csv"},
-  "mark": "bar",   
-  "transform": [
-    {"filter": {"param": "Year"}}
-  ],
+  "title": "Top 10 Countries of citizenship arriving in Australia",
+  "data": {
+    "url": "top_countries_citizenship.csv"
+  },
+  "width": "600",
+  "height": "400",
   "encoding": {
-    "x": {"aggregate": "sum", "field": "Number of arrivals"},
-    "y": {"field": "Country of citizenship"},
-    "color": {"field": "Year"},
+    "x": {"aggregate": "sum", "field": "Number of arrivals", "title": "Number of arrivals"},
+    "y": {"field": "Country of citizenship", "type":"nominal"},
     "tooltip": [
       {"field": "Number of arrivals", "type": "quantitative", "format": ","}
     ]
-  }
+  },
+  "layer": [
+    {
+      "mark": "bar",
+      "encoding": {
+        "color": {"field": "Year"},
+        "opacity": {
+          "condition": {"selection": "series", "value": 1},
+          "value": 0.2
+        }
+      },
+      "selection": {
+        "series": {
+          "type": "multi",
+          "encodings": ["color"],
+          "on": "click",
+          "bind": "legend"
+        }
+      }
+    }
+  ]
 }

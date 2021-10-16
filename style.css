@@ -61,7 +61,7 @@ body {background-color:#a4e3f3;}
     justify-content: center;
 }
 
-#countries_arrival_barchart{
+#barchart_arrivals_countries{
   position: relative;
   top: 170px;
   left: 15px;
@@ -70,13 +70,18 @@ body {background-color:#a4e3f3;}
   justify-content: center;
 }
 
-#barchart_done{
-  position: relative;
-  top: 170px;
-  left: 15px;
+#text4{
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: 'Roboto Slab', serif;
+  border-style: solid;
+  border-radius: 25px;
+  border-color: black;
+}
+
+#departureText{
+  font-size: large;
 }
 
 .vega-bind{
@@ -84,4 +89,5 @@ body {background-color:#a4e3f3;}
     top: 280px;
     right: 550px;
 }
+
 
