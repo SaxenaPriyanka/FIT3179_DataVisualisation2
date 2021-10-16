@@ -13,13 +13,11 @@
           "input": "select",
           "options": [
             null,
-            "TOTAL",
             "Australian Citizen Arrivals",
             "Non-Australian Citizen Arrivals"
           ],
           "labels": [
             "Show All",
-            "TOTAL",
             "Australian Citizens",
             "Non-Australian Citizens"
           ],
