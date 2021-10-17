@@ -1,114 +1,42 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 550,
+    "height": 350,
+    "background":"#D6EAF8",
+    "title": "Arrivals to Australia (2018 - 2021)",
     "data": {
-      "url": "Arrival_citizenships.csv"
+    "url": "Arrival_numbers.csv"
     },
-    "width": 650,
-    "height": 400,
-    "title": "Arrivals to Australia (2019 to 2021)",
-    "params": [
-      {
-        "name": "Citizenship_Selection",
-        "bind": {
-          "input": "select",
-          "options": [
-            null,
-            "Australian Citizen Arrivals",
-            "Non-Australian Citizen Arrivals"
-          ],
-          "labels": [
-            "Show All",
-            "Australian Citizens",
-            "Non-Australian Citizens"
-          ],
-          "name": "Citizenship Status Selection: "
+    "repeat": {
+        "layer": ["Australian Citizen Arrivals", "Non-Australian Citizen Arrivals"]
+    },
+    "transform": [
+        {
+            "calculate": "timeParse(datum['Month_Year'], '%d-%m-%y')",
+            "as": "dates"
         }
-      }
-    ],
-    "transform": [  
-        {"filter": "datum.arrival_numbers > 0"}, 
-        {"filter": "datum.arrival_numbers <= 1183090"},
-      {"filter": "Citizenship_Selection == null || datum.symbol == Citizenship_Selection"},
-      {
-        "calculate": "timeParse(datum['date'], '%d-%m-%y')",
-        "as": "date"
-    }
-    ],
-    "layer": [
-      {
-        "encoding": {
-          "x": {"field": "date", "timeUnit":"yearmonth", "type": "ordinal", "title": "Month and Year"},
-          "y": {
-            "field": "arrival_numbers",
-            "type": "quantitative",
-            "title": "Number of arrivals in Australia"
-          },
-          "color": {"field": "symbol", "type": "nominal", "title": "Citizenship Status"},
-          "tooltip": [
-            {"field": "date", "type": "temporal", "title": "Year"}
-          ]
+      ],
+    "spec": {
+      "mark": { 
+        "type": "line",
+        "point":true
         },
-        "layer": [
-          {"mark": "line"},
-          {
-            "selection": {
-              "label": {
-                "type": "single",
-                "nearest": true,
-                "on": "mouseover",
-                "encodings": ["x"],
-                "empty": "none"
-              }
-            },
-            "mark": "point",
-            "encoding": {
-              "opacity": {
-                "condition": {"selection": "label", "value": 1},
-                "value": 0
-              }
-            }
-          }
-        ]
-      },
-      {
-        "transform": [{"filter": {"selection": "label"}}],
-        "layer": [
-          {
-            "encoding": {
-              "text": {"type": "quantitative", "field": "arrival_numbers"},
-              "x": {"type": "temporal", "field": "date"},
-              "y": {"type": "quantitative", "field": "arrival_numbers"}
-            },
-            "layer": [
-              {
-                "mark": {
-                  "type": "text",
-                  "align": "left",
-                  "dx": 5,
-                  "dy": -5
-                }
-              },
-              {
-                "mark": {"type": "text", "align": "left", "dx": 5, "dy": -5},
-                "encoding": {"color": {"type": "nominal", "field": "symbol"}}
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "config": {
-      "axis": {
-        "domainWidth": 1,
-        "domainColor": "black",
-        "tickColor": "black",
-        "labelColor": "black",
-        "grid": true,
-        "titleColor": "black"
-      },
-      "view": {"stroke": "transparent"},
-      "legend": {"labelColor": "black", "titleColor": "black"}
-    }
-  }
-
-
+        "encoding": {
+        "x": { 
+            "bin": true,
+            "field": "dates", 
+            "timeUnit":"yearmonth", 
+            "type": "temporal", 
+            "title":"Dates"},
+        "y": { 
+            "field": {"repeat": "layer"}, 
+            "type": "quantitative", 
+            "title": "Arrivals in Australia"},
+        "color": {
+                "datum": {"repeat": "layer"}
+        },
+        "tooltip": [
+            {"field": "dates", "type": "temporal", "title": "Arrivals in"},
+            {"field": {"repeat": "layer"}, "type": "quantitative", "title": "Number of Arrivals", "format":","}
+        ]}
+}}

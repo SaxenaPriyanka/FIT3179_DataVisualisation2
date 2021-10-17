@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
-body {background-color:#e5ebec;}
+body {background-color:#5937f5fa;}
 
 #title{
   display: flex;
@@ -8,7 +8,7 @@ body {background-color:#e5ebec;}
   justify-content: center;
   font-family: 'Roboto Slab', serif;
   font-size: 42px;
-  color: rgb(50, 32, 211);
+  color: rgb(226, 225, 231);
 }
 
 #text1{
@@ -17,7 +17,7 @@ body {background-color:#e5ebec;}
     justify-content: center;
     font-family: 'Roboto Slab', serif;
     font-size: 15px;
-    color: rgb(50, 32, 211);
+    color: rgb(226, 225, 231);
   }
 
 
@@ -33,7 +33,7 @@ body {background-color:#e5ebec;}
 
 #arrivalText{
     font-size: large;
-    color: rgb(50, 32, 211);
+    color: rgb(226, 225, 231);
 }
 
 
@@ -45,7 +45,7 @@ body {background-color:#e5ebec;}
     justify-content: center;
     font-family: 'Roboto Slab', serif;
     font-size: 15px;
-    color: rgb(50, 32, 211);
+    color: rgb(226, 225, 231);
   }
 
 #australia_arrival_line{
