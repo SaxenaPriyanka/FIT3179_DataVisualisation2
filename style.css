@@ -70,18 +70,13 @@ body {background-color:#a4e3f3;}
   justify-content: center;
 }
 
-#text4{
+#barchart_arrivals_visa{
+  position: relative;
+  top: 400px;
+  left: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Roboto Slab', serif;
-  border-style: solid;
-  border-radius: 25px;
-  border-color: black;
-}
-
-#departureText{
-  font-size: large;
 }
 
 .vega-bind{
