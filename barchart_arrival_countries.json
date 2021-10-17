@@ -1,10 +1,13 @@
 {
-  "title": "Top 10 Countries of citizenship arriving in Australia",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Countries with the most arrivals in Australia",
+  "background": "#cefaf8",
   "data": {
     "url": "arrival_top_countries_citizenship.csv"
   },
   "width": "600",
   "height": "400",
+  "background": "#cefaf8",
   "encoding": {
     "x": {"aggregate": "sum", "field": "Number of arrivals", "title": "Number of arrivals"},
     "y": {"field": "Country of citizenship", "type":"nominal"},

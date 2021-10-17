@@ -1,9 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 550,
-    "height": 350,
-    "background":"#D6EAF8",
-    "title": "Arrivals to Australia (2018 - 2021)",
+    "width": 870,
+    "height": 300,
+    "background": "#cefaf8",
+    "title": "Arrivals to Australia (2019 to 2021)",
     "data": {
     "url": "Arrival_numbers.csv"
     },
@@ -33,7 +33,10 @@
             "type": "quantitative", 
             "title": "Arrivals in Australia"},
         "color": {
-                "datum": {"repeat": "layer"}
+                "datum": {"repeat": "layer"},
+                "scale": {
+                    "range": ["#27AE60", "#A569BD"]
+                }
         },
         "tooltip": [
             {"field": "dates", "type": "temporal", "title": "Arrivals in"},

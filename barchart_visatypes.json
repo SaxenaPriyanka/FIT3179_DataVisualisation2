@@ -1,5 +1,7 @@
 {
-    "title": "Different visa groups arriving in Australia",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",  
+  "title": "Different visa groups arriving in Australia",
+  "background": "#cefaf8",
     "data": {
       "url": "arrivals_visa.csv"
     },
@@ -7,7 +9,7 @@
     "height": "100",
     "encoding": {
       "x": {"aggregate": "sum", "field": "Number of arrivals", "title": "Number of arrivals"},
-      "y": {"field": "Visa_types", "type":"nominal"},
+      "y": {"field": "Visa_types", "type":"nominal", "title":"Visa groups"},
       "tooltip": [
         {"field": "Number of arrivals", "type": "quantitative", "format": ","}
       ]
