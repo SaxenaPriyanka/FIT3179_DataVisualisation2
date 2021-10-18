@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Statewise arrivals to Australia (2021)",
+  "title": "Statewise arrivals to Australia (2019 to 2021)",
   "width": 800,
   "height": 600,
   "projection": {
@@ -20,7 +20,7 @@
     }
   ],
   "data": {
-    "url": "Arrivals_statewise2.csv"
+    "url": "Arrivals_statewise.csv"
     },
   "transform": [
     {
@@ -44,7 +44,7 @@
           "type": "quantitative"
         },
         "tooltip": [
-          {"field": "properties.STE_NAME16", "type": "nominal", "title": "State"},
+          {"field": "State", "type": "nominal", "title": "State"},
           {"field": "Year", "type": "quantitative", "title": "Year"},
           {"field": "Number of arrivals", "type": "quantitative", "title": "Number of arrivals", "format": ","}
         ]

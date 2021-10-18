@@ -1,9 +1,25 @@
-State,June_2019,June_2020,June_2021,Latitude,Longitude
-New South Wales,609700,11670,40610,-31.840233,145.612793
-Victoria,431390,6360,10790,-37.0201,144.9646
-Queensland,299070,4500,38730,-20.917574,142.702789
-South Australia,41290,290,3520,-30.000233,136.209152
-Western Australia,164790,1760,7220,-25.042261,117.793221
-Tasmania,0,0,690,-41.640079,146.315918
-Northern Territory,13130,890,1870,-19.491411,132.550964
-Australian Capital Territory,3620,300,30,-35.473469,149.012375
+State,Year,Number of arrivals,Latitude,Longitude
+New South Wales,2019,609700,-31.840233,145.612793
+Victoria,2019,431390,-37.0201,144.9646
+Queensland,2019,299070,-20.917574,142.702789
+South Australia,2019,41290,-30.000233,136.209152
+Western Australia,2019,164790,-25.042261,117.793221
+Tasmania,2019,0,-41.640079,146.315918
+Northern Territory,2019,13130,-19.491411,132.550964
+Australian Capital Territory,2019,3620,-35.473469,149.012375
+New South Wales,2020,11670,,
+Victoria,2020,6360,,
+Queensland,2020,4500,,
+South Australia,2020,290,,
+Western Australia,2020,1760,,
+Tasmania,2020,0,,
+Northern Territory,2020,890,,
+Australian Capital Territory,2020,300,,
+New South Wales,2021,40610,,
+Victoria,2021,10790,,
+Queensland,2021,38730,,
+South Australia,2021,3520,,
+Western Australia,2021,7220,,
+Tasmania,2021,690,,
+Northern Territory,2021,1870,,
+Australian Capital Territory,2021,30,,
