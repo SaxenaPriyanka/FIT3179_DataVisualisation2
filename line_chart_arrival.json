@@ -35,7 +35,7 @@
         "color": {
                 "datum": {"repeat": "layer"},
                 "scale": {
-                    "range": ["#27AE60", "#A569BD"]
+                    "range": ["#117864", "#A569BD"]
                 }
         },
         "tooltip": [
