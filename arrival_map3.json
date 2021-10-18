@@ -1,52 +1,53 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Statewise arrivals to Australia (2021)",
-    "width": 800,
-    "height": 600,
-    "projection": {
-      "type": "equirectangular"
-    },
-    "params": [
-      {
-        "name": "Year_selection",
-        "value": 2021,
-        "bind": {
-          "input": "range",
-          "min": 2019,
-          "max": 2021,
-          "step": 1,
-          "name": "Year: "
-        }
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Statewise arrivals to Australia (2021)",
+  "width": 800,
+  "height": 600,
+  "projection": {
+    "type": "equirectangular"
+  },
+  "params": [
+    {
+      "name": "Year_selection",
+      "value": 2021,
+      "bind": {
+        "input": "range",
+        "min": 2019,
+        "max": 2021,
+        "step": 1,
+        "name": "Year: "
       }
-    ],
-    "data": {
-        "url": "Arrivals_statewise2.csv"
+    }
+  ],
+  "data": {
+    "url": "Arrivals_statewise2.csv"
     },
-    "transform": [
-        {
-            "lookup": "State",
-            "from": {
-                "data": {
-                "url": "australia.topojson",
-                "format": {"type": "topojson", "feature": "name"}
+  "transform": [
+    {
+      "lookup": "State",
+          "from": {
+            "data": {
+              "url": "australia.topojson",
+              "format": {"type": "topojson", "feature": "STE_2016_AUST"}
             },
             "key": "properties.STE_NAME16"
-        },
-        "as": "geo"
+          },
+          "as": "geo"
         },
         {"filter": "datum.Year == Year_selection"}
-    ],
-    "mark": {"type": "geoshape"},
-  "encoding": {
-    "shape": {
-        "field": "geo",
-        "type": "geojson"
+      ],
+      "mark": {"type": "geoshape", "stroke":"black", "strokeWidth": 0.8},
+      "encoding": {
+        "shape": {"field": "geo", "type": "geojson"},
+        "color": {
+          "field": "Number of arrivals",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {"field": "properties.STE_NAME16", "type": "nominal", "title": "State"},
+          {"field": "Year", "type": "quantitative", "title": "Year"},
+          {"field": "Number of arrivals", "type": "quantitative", "title": "Number of arrivals", "format": ","}
+        ]
       },
-    "color": {"field": "Number of arrivals", "type": "quantitative"},
-    "tooltip": [
-      {"field": "properties.STE_NAME16", "type": "nominal", "title": "State"},
-      {"field": "Number of arrivals", "type": "quantitative", "title": "Number of arrivals in the country"}
-    ]
-  },
   "config": {}
 }

@@ -22,7 +22,6 @@ body {background-color:#cefaf8;}
     color: #283747;
   }
 
-
 #text2{
   position: relative;
     bottom: 40px;
@@ -46,19 +45,19 @@ body {background-color:#cefaf8;}
 
 #text3{
     position: relative;
-    top: 170px;
+    top: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Roboto Slab', serif;
-    font-size: 15px;
+    font-size: 13px;
     color: #283747;
   }
 
 
 #text4{
   position: relative;
-  top: 60px;
+  top: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -110,7 +109,7 @@ body {background-color:#cefaf8;}
 
 #australia_arrival_map2{
   position: relative;
-  top: 60px;
+  top: 100px;
   left: 220px;
 }
 

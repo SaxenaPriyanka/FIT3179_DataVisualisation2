@@ -1,4 +1,4 @@
-var vg_1 = "arrival_map2.json";
+var vg_1 = "arrival_map3.json";
 var vg_2 = "line_chart_arrival.json";
 var vg_3 = "barchart_arrival_countries.json";
 var vg_4 = "barchart_visatypes.json";
